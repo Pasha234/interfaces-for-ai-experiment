@@ -1,0 +1,18 @@
+## Фаза 2 — Запрос на доработку (одинаковый для А и Б)
+
+Пользователям неудобно отменять бронь и создавать её заново, если время встречи сдвинулось. Добавь возможность переноса существующего бронирования на новое время:
+
+*   `PATCH /bookings/{id}` — тело `{"start_time", "end_time"}`.
+*   Возвращает `200` и обновленное бронирование (либо `400` / `404` / `409`).
+
+Используй обновленные контракты
+
+
+=========================
+Добавить это в контракты
+
+// В BookingRepository:
+UpdateTimeRange(ctx context.Context, id string, newRange TimeRange) (Booking, error)
+
+// В BookingService:
+Reschedule(ctx context.Context, id string, newRange TimeRange) (Booking, error)
