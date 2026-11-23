@@ -1,0 +1,4 @@
+/booking-service
+*.test
+/coverage.out
+/.idea

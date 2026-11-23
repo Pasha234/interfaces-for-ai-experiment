@@ -1,0 +1,14 @@
+NLOC,CCN,token,PARAM,length,location,file,function,long_name,start,end
+5,3,72,0,5,"parse@39-43@./main.go","./main.go","parse","(input bookingTimes)parse",39,43
+35,4,271,0,38,"main@47-84@./main.go","./main.go","main","main",47,84
+12,2,106,0,12,"databaseURL@86-97@./main.go","./main.go","databaseURL","databaseURL",86,97
+6,2,30,2,6,"env@99-104@./main.go","./main.go","env","env key , fallback string",99,104
+17,1,31,2,17,"migrate@106-122@./main.go","./main.go","migrate","migrate ctx context . Context , db * sql . DB",106,122
+43,10,317,2,46,"createBooking@124-169@./main.go","./main.go","createBooking","(s*server)createBooking w http . ResponseWriter , r * http . Request",124,169
+68,14,414,2,75,"rescheduleBooking@171-245@./main.go","./main.go","rescheduleBooking","(s*server)rescheduleBooking w http . ResponseWriter , r * http . Request",171,245
+15,2,91,6,16,"bookingOverlaps@247-262@./main.go","./main.go","bookingOverlaps","bookingOverlaps ctx context . Context , tx * sql . Tx , roomID string , start , end time . Time , excludeID * int64",247,262
+37,6,232,2,38,"listBookings@264-301@./main.go","./main.go","listBookings","(s*server)listBookings w http . ResponseWriter , r * http . Request",264,301
+25,6,149,2,25,"deleteBooking@303-327@./main.go","./main.go","deleteBooking","(s*server)deleteBooking w http . ResponseWriter , r * http . Request",303,327
+13,3,116,3,13,"decodeBookingRequest@329-341@./main.go","./main.go","decodeBookingRequest","decodeBookingRequest w http . ResponseWriter , r * http . Request , input any",329,341
+7,2,62,3,7,"writeJSON@343-349@./main.go","./main.go","writeJSON","writeJSON w http . ResponseWriter , status int , value any",343,349
+3,1,33,3,3,"writeError@351-353@./main.go","./main.go","writeError","writeError w http . ResponseWriter , status int , message string",351,353

@@ -1,0 +1,9 @@
+{
+  "function_count": 26,
+  "max_ccn": 10.0,
+  "mean_ccn": 3.38,
+  "functions_ccn_gt_10": 0,
+  "max_function_nloc": 49.0,
+  "mean_function_nloc": 14.08,
+  "max_parameters": 3.0
+}

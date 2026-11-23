@@ -7,10 +7,24 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 
+test_file="$1"
+if [ ! -f "$test_file" ]; then
+    echo "Error: test file not found: $test_file" >&2
+    exit 1
+fi
+
+test_dir=$(dirname "$test_file")
+tests=$(grep -oE '^func Test[A-Za-z0-9_]+\(' "$test_file" | sed -E 's/^func (Test[A-Za-z0-9_]+)\(/\1/' | paste -sd'|' -)
+
+if [ -z "$tests" ]; then
+    echo "Error: no Test* functions found in $test_file" >&2
+    exit 1
+fi
+
 result=$(mktemp)
 trap 'rm -f "$result"' EXIT
 
-go test -json "$1" | tee "$result" | jq -r '
+(cd "$test_dir" && go test -count=1 -json -run "^(${tests})$" .) | tee "$result" | jq -r '
     select(.Action == "output") | .Output | rtrimstr("\n")
 '
 

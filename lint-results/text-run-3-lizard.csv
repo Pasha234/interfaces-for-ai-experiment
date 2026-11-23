@@ -1,0 +1,15 @@
+NLOC,CCN,token,PARAM,length,location,file,function,long_name,start,end
+4,1,23,0,4,"anonymous__0@68-71@./cmd/app/main.go","./cmd/app/main.go","anonymous__0","anonymous__0",68,71
+58,9,461,0,67,"main@21-87@./cmd/app/main.go","./cmd/app/main.go","main","main",21,87
+6,2,30,2,6,"env@89-94@./cmd/app/main.go","./cmd/app/main.go","env","env key , fallback string",89,94
+5,1,53,2,5,"anonymous__1@97-101@./cmd/app/main.go","./cmd/app/main.go","anonymous__1","anonymous__1 w http . ResponseWriter , r * http . Request",97,101
+3,1,20,1,7,"logging@96-102@./cmd/app/main.go","./cmd/app/main.go","logging","logging next http . Handler",96,102
+1,1,21,1,1,"NewStore@40-40@./internal/bookings/store.go","./internal/bookings/store.go","NewStore","NewStore db * sql . DB",40,40
+19,2,52,2,19,"Migrate@42-60@./internal/bookings/store.go","./internal/bookings/store.go","Migrate","Migrate ctx context . Context , db * sql . DB",42,60
+69,13,443,2,73,"Create@62-134@./internal/bookings/store.go","./internal/bookings/store.go","Create","(s*Store)Create w http . ResponseWriter , r * http . Request",62,134
+32,6,247,2,32,"List@136-167@./internal/bookings/store.go","./internal/bookings/store.go","List","(s*Store)List w http . ResponseWriter , r * http . Request",136,167
+24,6,169,2,24,"Cancel@169-192@./internal/bookings/store.go","./internal/bookings/store.go","Cancel","(s*Store)Cancel w http . ResponseWriter , r * http . Request",169,192
+80,15,511,2,88,"Reschedule@194-281@./internal/bookings/store.go","./internal/bookings/store.go","Reschedule","(s*Store)Reschedule w http . ResponseWriter , r * http . Request",194,281
+15,4,108,3,15,"decodeJSON@283-297@./internal/bookings/store.go","./internal/bookings/store.go","decodeJSON","decodeJSON w http . ResponseWriter , r * http . Request , target any",283,297
+5,1,47,3,5,"writeJSON@299-303@./internal/bookings/store.go","./internal/bookings/store.go","writeJSON","writeJSON w http . ResponseWriter , status int , value any",299,303
+3,1,33,3,3,"writeError@305-307@./internal/bookings/store.go","./internal/bookings/store.go","writeError","writeError w http . ResponseWriter , status int , message string",305,307

@@ -1,0 +1,28 @@
+NLOC,CCN,token,PARAM,length,location,file,function,long_name,start,end
+3,1,20,1,3,"NewBookingService@16-18@./internal/service/booking.go","./internal/service/booking.go","NewBookingService","NewBookingService repository domain . BookingRepository",16,18
+19,8,203,2,19,"Create@20-38@./internal/service/booking.go","./internal/service/booking.go","Create","(s*BookingService)Create ctx context . Context , input domain . CreateBookingInput",20,38
+3,1,43,2,3,"List@40-42@./internal/service/booking.go","./internal/service/booking.go","List","(s*BookingService)List ctx context . Context , roomID string",40,42
+7,2,48,2,7,"Cancel@44-50@./internal/service/booking.go","./internal/service/booking.go","Cancel","(s*BookingService)Cancel ctx context . Context , id string",44,50
+10,5,107,3,10,"Reschedule@52-61@./internal/service/booking.go","./internal/service/booking.go","Reschedule","(s*BookingService)Reschedule ctx context . Context , id string , newRange domain . TimeRange",52,61
+19,2,198,0,21,"newID@63-83@./internal/service/booking.go","./internal/service/booking.go","newID","newID",63,83
+3,1,21,1,3,"NewBookingRepository@17-19@./internal/postgres/booking.go","./internal/postgres/booking.go","NewBookingRepository","NewBookingRepository db * sql . DB",17,19
+20,2,52,1,20,"Migrate@21-40@./internal/postgres/booking.go","./internal/postgres/booking.go","Migrate","(r*BookingRepository)Migrate ctx context . Context",21,40
+14,4,105,2,14,"Create@42-55@./internal/postgres/booking.go","./internal/postgres/booking.go","Create","(r*BookingRepository)Create ctx context . Context , booking domain . Booking",42,55
+26,6,212,2,28,"List@57-84@./internal/postgres/booking.go","./internal/postgres/booking.go","List","(r*BookingRepository)List ctx context . Context , roomID string",57,84
+14,4,86,2,14,"Delete@86-99@./internal/postgres/booking.go","./internal/postgres/booking.go","Delete","(r*BookingRepository)Delete ctx context . Context , id string",86,99
+19,5,172,3,19,"UpdateTimeRange@101-119@./internal/postgres/booking.go","./internal/postgres/booking.go","UpdateTimeRange","(r*BookingRepository)UpdateTimeRange ctx context . Context , id string , newRange domain . TimeRange",101,119
+1,1,18,1,1,"NewHandler@26-26@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","NewHandler","NewHandler service bookingService",26,26
+6,1,43,0,6,"Routes@28-33@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","Routes","(h*Handler)Routes",28,33
+11,3,79,2,11,"bookings@55-65@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","bookings","(h*Handler)bookings w http . ResponseWriter , r * http . Request",55,65
+35,6,266,2,35,"create@67-101@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","create","(h*Handler)create w http . ResponseWriter , r * http . Request",67,101
+18,5,150,2,18,"list@103-120@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","list","(h*Handler)list w http . ResponseWriter , r * http . Request",103,120
+20,6,151,2,20,"bookingByID@122-141@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","bookingByID","(h*Handler)bookingByID w http . ResponseWriter , r * http . Request",122,141
+31,6,251,3,31,"reschedule@143-173@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","reschedule","(h*Handler)reschedule w http . ResponseWriter , r * http . Request , id string",143,173
+12,4,114,2,12,"writeServiceError@175-186@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","writeServiceError","(h*Handler)writeServiceError w http . ResponseWriter , err error",175,186
+6,1,49,1,6,"toResponse@188-193@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","toResponse","toResponse booking domain . Booking",188,193
+5,1,47,3,5,"writeJSON@195-199@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","writeJSON","writeJSON w http . ResponseWriter , status int , value any",195,199
+3,1,33,3,3,"writeError@201-203@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","writeError","writeError w http . ResponseWriter , status int , message string",201,203
+8,2,59,0,8,"anonymous__0@60-67@./cmd/app/main.go","./cmd/app/main.go","anonymous__0","anonymous__0",60,67
+38,8,297,0,50,"main@24-73@./cmd/app/main.go","./cmd/app/main.go","main","main",24,73
+21,3,166,0,21,"databaseURL@75-95@./cmd/app/main.go","./cmd/app/main.go","databaseURL","databaseURL",75,95
+6,2,35,2,6,"envOr@97-102@./cmd/app/main.go","./cmd/app/main.go","envOr","envOr name , fallback string",97,102

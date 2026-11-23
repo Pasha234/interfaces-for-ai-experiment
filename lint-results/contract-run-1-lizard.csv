@@ -1,0 +1,24 @@
+NLOC,CCN,token,PARAM,length,location,file,function,long_name,start,end
+3,1,20,1,3,"NewBookingService@16-18@./internal/service/booking.go","./internal/service/booking.go","NewBookingService","NewBookingService repository domain . BookingRepository",16,18
+17,8,186,2,19,"Create@20-38@./internal/service/booking.go","./internal/service/booking.go","Create","(s*BookingService)Create ctx context . Context , input domain . CreateBookingInput",20,38
+3,1,38,2,3,"List@40-42@./internal/service/booking.go","./internal/service/booking.go","List","(s*BookingService)List ctx context . Context , roomID string",40,42
+6,2,40,2,6,"Cancel@44-49@./internal/service/booking.go","./internal/service/booking.go","Cancel","(s*BookingService)Cancel ctx context . Context , id string",44,49
+9,5,99,3,9,"Reschedule@51-59@./internal/service/booking.go","./internal/service/booking.go","Reschedule","(s*BookingService)Reschedule ctx context . Context , id string , newRange domain . TimeRange",51,59
+19,2,202,0,19,"newID@61-79@./internal/service/booking.go","./internal/service/booking.go","newID","newID",61,79
+3,1,21,1,3,"NewBookingRepository@18-20@./internal/repository/postgres/bookings.go","./internal/repository/postgres/bookings.go","NewBookingRepository","NewBookingRepository db * sql . DB",18,20
+14,4,107,2,14,"Create@22-35@./internal/repository/postgres/bookings.go","./internal/repository/postgres/bookings.go","Create","(r*BookingRepository)Create ctx context . Context , booking domain . Booking",22,35
+24,5,181,2,25,"List@37-61@./internal/repository/postgres/bookings.go","./internal/repository/postgres/bookings.go","List","(r*BookingRepository)List ctx context . Context , roomID string",37,61
+14,4,86,2,14,"Delete@63-76@./internal/repository/postgres/bookings.go","./internal/repository/postgres/bookings.go","Delete","(r*BookingRepository)Delete ctx context . Context , id string",63,76
+22,5,175,3,22,"UpdateTimeRange@78-99@./internal/repository/postgres/bookings.go","./internal/repository/postgres/bookings.go","UpdateTimeRange","(r*BookingRepository)UpdateTimeRange ctx context . Context , id string , newRange domain . TimeRange",78,99
+18,3,74,2,18,"Migrate@101-118@./internal/repository/postgres/bookings.go","./internal/repository/postgres/bookings.go","Migrate","Migrate ctx context . Context , db * sql . DB",101,118
+7,1,51,1,7,"NewHandler@18-24@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","NewHandler","NewHandler service domain . BookingService",18,24
+11,3,79,2,11,"bookings@41-51@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","bookings","(h*Handler)bookings w http . ResponseWriter , r * http . Request",41,51
+16,5,121,2,16,"booking@53-68@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","booking","(h*Handler)booking w http . ResponseWriter , r * http . Request",53,68
+11,3,88,3,11,"cancel@70-80@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","cancel","(h*Handler)cancel w http . ResponseWriter , r * http . Request , id string",70,80
+40,10,360,3,40,"reschedule@82-121@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","reschedule","(h*Handler)reschedule w http . ResponseWriter , r * http . Request , id string",82,121
+39,11,359,2,39,"create@123-161@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","create","(h*Handler)create w http . ResponseWriter , r * http . Request",123,161
+13,3,127,2,13,"list@163-175@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","list","(h*Handler)list w http . ResponseWriter , r * http . Request",163,175
+3,1,48,1,3,"toResponse@177-179@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","toResponse","toResponse booking domain . Booking",177,179
+5,1,56,3,5,"writeError@181-185@./internal/httpapi/bookings.go","./internal/httpapi/bookings.go","writeError","writeError w http . ResponseWriter , status int , message string",181,185
+6,1,44,0,6,"anonymous__0@51-56@./cmd/app/main.go","./cmd/app/main.go","anonymous__0","anonymous__0",51,56
+33,8,236,0,42,"main@21-62@./cmd/app/main.go","./cmd/app/main.go","main","main",21,62

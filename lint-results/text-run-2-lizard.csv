@@ -1,0 +1,12 @@
+NLOC,CCN,token,PARAM,length,location,file,function,long_name,start,end
+23,4,178,0,25,"main@31-55@./cmd/app/main.go","./cmd/app/main.go","main","main",31,55
+11,3,77,2,11,"bookings@57-67@./cmd/app/main.go","./cmd/app/main.go","bookings","(s*server)bookings w http . ResponseWriter , r * http . Request",57,67
+68,16,515,2,71,"createBooking@69-139@./cmd/app/main.go","./cmd/app/main.go","createBooking","(s*server)createBooking w http . ResponseWriter , r * http . Request",69,139
+31,6,242,2,31,"listBookings@141-171@./cmd/app/main.go","./cmd/app/main.go","listBookings","(s*server)listBookings w http . ResponseWriter , r * http . Request",141,171
+31,9,207,2,31,"bookingByID@173-203@./cmd/app/main.go","./cmd/app/main.go","bookingByID","(s*server)bookingByID w http . ResponseWriter , r * http . Request",173,203
+78,15,561,3,85,"rescheduleBooking@205-289@./cmd/app/main.go","./cmd/app/main.go","rescheduleBooking","(s*server)rescheduleBooking w http . ResponseWriter , r * http . Request , id string",205,289
+16,1,31,2,16,"migrate@291-306@./cmd/app/main.go","./cmd/app/main.go","migrate","migrate ctx context . Context , db * sql . DB",291,306
+19,2,202,0,19,"newID@308-326@./cmd/app/main.go","./cmd/app/main.go","newID","newID",308,326
+5,1,56,3,5,"writeError@328-332@./cmd/app/main.go","./cmd/app/main.go","writeError","writeError w http . ResponseWriter , status int , message string",328,332
+12,2,93,0,12,"databaseURL@334-345@./cmd/app/main.go","./cmd/app/main.go","databaseURL","databaseURL",334,345
+6,2,30,2,6,"env@347-352@./cmd/app/main.go","./cmd/app/main.go","env","env key , fallback string",347,352
